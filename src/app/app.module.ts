@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TinyEditorComponent } from 'components/tiny-editor/tiny-editor.component';
 import { KioskComponent } from 'components/kiosk/kiosk.component';
+import { HeaderComponent } from 'components/header/header.component';
+
 
 const appRoutes : Routes =[
   {path: 'kiosk', component: KioskComponent}
@@ -13,7 +15,8 @@ const appRoutes : Routes =[
   declarations: [
     AppComponent,
     TinyEditorComponent,
-    KioskComponent
+    KioskComponent,
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(
