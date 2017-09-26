@@ -1,11 +1,31 @@
 #header {
-  height: 10%;
-  min-height: 4em;
   width: 100%;
   background-color: #663366;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom:0;
-  right:0;
+}
+
+.image_container {
+  /* Fontys logo is edgeless so we add padding */
+  padding: 10px;
+  /* Bottom padding less than other sides */
+  padding-bottom:5px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+}
+.image_container img {
+  /* FONTYS LOGO SCALING, 100% is full size and 30% is the same size as the Fontys websites */
+  width: 30%;
+}
+
+.headertext {
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  padding-left: 20px;
+  color: white;
+}
+
+.center {
+  display: table;
+  padding-left:100px;
+  margin: auto;
 }
