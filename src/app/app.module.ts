@@ -5,11 +5,8 @@ import { AppComponent } from './app.component';
 import { TinyEditorComponent } from 'components/tiny-editor/tiny-editor.component';
 import { KioskComponent } from 'components/kiosk/kiosk.component';
 import { HeaderComponent } from 'components/header/header.component';
+import {routing} from 'app/app.routes';
 
-
-const appRoutes : Routes =[
-  {path: 'kiosk', component: KioskComponent}
-] 
 
 @NgModule({
   declarations: [
@@ -19,10 +16,7 @@ const appRoutes : Routes =[
     HeaderComponent
   ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
+    routing,
     BrowserModule
   ],
   providers: [],
