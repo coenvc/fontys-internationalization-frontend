@@ -1,5 +1,4 @@
 
-
 .background-image {
   background: no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -15,65 +14,68 @@
   transform: scale(1.1);
 }
 
-.content-container{
+.content-container {
   margin-top: 5rem;
 }
 
-
-.content-field{
+.content-field {
   width: 100%;
   background-color: white;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 
 }
 
-.internship-info{
+.internship-info {
   height: 80vh;
 }
 
- .internship-info p{
+.internship-info p {
   color: #524d43;
   font-size: 20px;
 }
 
-h1{
+h1 {
   color: #663366;
 }
 
-
-.student-info{
+.student-info {
   height: 50vh;
 }
 
-.student-info span{
+.student-info span {
   color: #524d43;
   font-size: 24px;
 }
 
-.qr-info{
+.qr-info {
   margin-top: 2.5vh;
   height: 27.5vh;
 }
 
 .qr-text {
   padding: 20px;
+  padding-top:3em;
+  color: #524d43;
+  font-size: 24px;
+}
+
+#qr-image{
+  margin: 0 auto;
+  margin:20px;
 }
 
 .image_container {
-  /* Fontys logo is edgeless so we add padding */
-
-  /* Bottom padding less than other sides */
-  margin-top: 10px;
   width: auto;
   height: auto;
   display: inline-block;
   overflow: hidden;
-  background-color: red;
 }
+
 .image_container img {
-  /* FONTYS LOGO SCALING, 100% is full size and 30% is the same size as the Fontys websites */
-  width: 75%;
+  width: 80%;
+  padding-top:20px;
 }
+
 
 /* letters -> 28px/32px helvetica neue #524d43*/
 
