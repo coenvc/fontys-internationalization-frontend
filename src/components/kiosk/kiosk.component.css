@@ -54,13 +54,13 @@ h1 {
 
 .qr-text {
   padding: 20px;
-  padding-top:3em;
+  padding-top:2.5vh;
   color: #524d43;
   font-size: 24px;
 }
 
 #qr-image{
-  margin: 0 auto;
+  margin: 2.5vh auto;
   margin:20px;
 }
 
@@ -75,6 +75,15 @@ h1 {
   width: 80%;
   padding-top:20px;
 }
+ 
+.student-image{ 
+  width: 100%;
+} 
+
+.student-image{ 
+  margin-top: 8vh;
+}
+
 
 
 /* letters -> 28px/32px helvetica neue #524d43*/
