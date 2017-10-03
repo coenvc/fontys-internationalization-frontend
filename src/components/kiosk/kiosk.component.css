@@ -63,12 +63,12 @@ h1{
   /* Fontys logo is edgeless so we add padding */
 
   /* Bottom padding less than other sides */
-  margin-top: 10px;
+  margin-top: 30px;
   width: auto;
   height: auto;
   display: inline-block;
   overflow: hidden;
-  background-color: red;
+  
 }
 .image_container img {
   /* FONTYS LOGO SCALING, 100% is full size and 30% is the same size as the Fontys websites */
