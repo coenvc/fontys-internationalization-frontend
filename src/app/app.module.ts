@@ -7,6 +7,7 @@ import { KioskComponent } from 'components/kiosk/kiosk.component';
 import { HeaderComponent } from 'components/header/header.component';
 import {routing} from 'app/app.routes';
 import { MapComponent } from 'components/map/map.component';
+import { BlogComponent } from 'components/blog/blog.component';
 
 
 
@@ -16,7 +17,8 @@ import { MapComponent } from 'components/map/map.component';
     TinyEditorComponent,
     KioskComponent,
     HeaderComponent,
-    MapComponent
+    MapComponent,
+    BlogComponent
   ],
   imports: [
     routing,
