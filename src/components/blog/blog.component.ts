@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Blog } from 'models/Blog';
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  title: String;
+  public blog : Blog;
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class BlogComponent implements OnInit {
 
 
   onClickMe() {
-    console.log(this.title);
+    console.log(this.blog.title);
   }
 
   onSubmit(){
