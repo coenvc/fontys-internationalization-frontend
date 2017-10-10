@@ -1,0 +1,92 @@
+
+.background-image {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -999;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  transform: scale(1.1);
+}
+
+.content-container {
+  margin-top: 5rem;
+}
+
+.content-field {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+}
+
+.internship-info {
+  height: 80vh;
+}
+
+.internship-info p {
+  color: #524d43;
+  font-size: 20px;
+}
+
+h1 {
+  color: #663366;
+}
+
+.student-info {
+  height: 50vh;
+}
+
+.student-info span {
+  color: #524d43;
+  font-size: 24px;
+}
+
+.qr-info {
+  margin-top: 2.5vh;
+  height: 27.5vh;
+}
+
+.qr-text {
+  padding: 20px;
+  padding-top:2.5vh;
+  color: #524d43;
+  font-size: 24px;
+}
+
+#qr-image{
+  margin: 2.5vh auto;
+  margin:20px;
+}
+
+.image_container {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image_container img {
+  width: 80%;
+  padding-top:20px;
+}
+ 
+.student-image{ 
+  width: 100%;
+} 
+
+.student-image{ 
+  margin-top: 8vh;
+}
+
+
+
+/* letters -> 28px/32px helvetica neue #524d43*/
+
+/* Koptekstek -> 54px helvetica neue bold #663366*/
+
