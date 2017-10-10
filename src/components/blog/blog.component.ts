@@ -8,7 +8,9 @@ import { Blog } from 'models/Blog';
 })
 export class BlogComponent implements OnInit {
 
-  public blog : Blog;
+  public blog : Blog = new Blog();
+  public myTitle : String;
+  public myContent : String;
 
   constructor() { }
 
@@ -16,12 +18,9 @@ export class BlogComponent implements OnInit {
   }
 
 
-  onClickMe() {
+  onSubmit(){
+    this.blog.title = this.myTitle;
+    this.blog.content = this.myContent;
     console.log(this.blog.title);
   }
-
-  onSubmit(){
-    
-  }
-
 }
