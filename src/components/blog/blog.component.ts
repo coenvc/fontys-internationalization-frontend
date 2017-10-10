@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
+  title: String;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  onClickMe() {
+    console.log(this.title);
+  }
+
+  onSubmit(){
+    
   }
 
 }
