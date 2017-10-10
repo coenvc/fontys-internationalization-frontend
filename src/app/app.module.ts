@@ -6,6 +6,7 @@ import { TinyEditorComponent } from 'components/tiny-editor/tiny-editor.componen
 import { KioskComponent } from 'components/kiosk/kiosk.component';
 import { HeaderComponent } from 'components/header/header.component';
 import {routing} from 'app/app.routes';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {routing} from 'app/app.routes';
     AppComponent,
     TinyEditorComponent,
     KioskComponent,
-    HeaderComponent
+    HeaderComponent,
+    MapComponent
   ],
   imports: [
     routing,
