@@ -9,7 +9,9 @@ import { HeaderComponent } from 'components/header/header.component';
 import {routing} from 'app/app.routes';
 import { MapComponent } from 'components/map/map.component';
 import { BlogComponent } from 'components/blog/blog.component';
-
+import{HttpClientService} from "./database/HttpClientService";
+import {BlogDataservice} from "./database/blog.dataservice";
+import {HttpModule} from "@angular/http";
 
 
 @NgModule({
@@ -24,9 +26,11 @@ import { BlogComponent } from 'components/blog/blog.component';
   imports: [
     routing,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [HttpClientService,
+    BlogDataservice],
   bootstrap: [AppComponent]
 })
 
