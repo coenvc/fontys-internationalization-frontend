@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Blog } from 'models/Blog';
+import {Component, OnInit} from '@angular/core';
+import {Blog} from 'models/Blog';
 
 @Component({
   selector: 'app-blog',
@@ -8,19 +8,18 @@ import { Blog } from 'models/Blog';
 })
 export class BlogComponent implements OnInit {
 
-  public blog : Blog = new Blog();
-  public myTitle : String;
-  public myContent : String;
+  public blog: Blog = new Blog();
 
-  constructor() { }
+  constructor() {
+    this.blog.title = 'Mijn titel';
+  }
 
   ngOnInit() {
   }
 
 
-  onSubmit(){
-    this.blog.title = this.myTitle;
-    this.blog.content = this.myContent;
+  onSubmit() {
     console.log(this.blog.title);
+
   }
 }
