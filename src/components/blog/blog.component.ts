@@ -17,9 +17,12 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
   }
 
+  getContent(source: any) {
+    this.blog.content = source;
+  }
 
   onSubmit() {
     console.log(this.blog.title);
-
+    console.log(this.blog.content);
   }
 }

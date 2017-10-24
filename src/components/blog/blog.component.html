@@ -1,14 +1,15 @@
 <header></header>
 <div class="container">
-    <form (ngSubmit)="onSubmit()">
-  <br>
-  Title: <input [(ngModel)]="blog.title" type="text" class="form-field" id="title" style="width:100%" name="title"
-  autocomplete="off" required ngModel>
-  <br>
-  <br>
-  <tiny-editor [elementId]="'my-editor-id'" >
-  </tiny-editor>
-  <br>
-  <br>
- <button type="button">Click me!</button></form>
+  <form (ngSubmit)="onSubmit()">
+    <br>
+    Title: <input [(ngModel)]="blog.title" type="text" class="form-field" id="title" style="width:100%" name="title"
+                  autocomplete="off" required ngModel>
+    <br>
+    <br>
+    <tiny-editor [elementId]="'my-editor-id'" (onEditorKeyup)="getContent($event)">
+    </tiny-editor>
+    <br>
+    <br>
+    <button>Click me!</button>
+  </form>
 </div>
