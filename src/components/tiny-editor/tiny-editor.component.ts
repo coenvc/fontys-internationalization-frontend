@@ -5,16 +5,17 @@ import { Component, OnInit, AfterViewInit, OnDestroy, Input, Output, EventEmitte
   templateUrl: './tiny-editor.component.html',
   styleUrls: ['./tiny-editor.component.css']
 })
-export class TinyEditorComponent implements AfterViewInit, OnDestroy { 
+export class TinyEditorComponent implements AfterViewInit, OnDestroy {
   @Input() elementId: String;
   @Output() onEditorKeyup = new EventEmitter<any>();
-  editor;  
+  editor;
 
-  constructor() { }  
+  constructor() {  }
 
   ngOnDestroy(): void {
     tinymce.remove(this.editor);
   }
+
   ngAfterViewInit(): void {
     tinymce.init({
       selector: '#' + this.elementId,
@@ -25,13 +26,13 @@ export class TinyEditorComponent implements AfterViewInit, OnDestroy {
         this.editor = editor;
         editor.on('keyup', () => {
           const content = editor.getContent();
-          this.onEditorKeyup.emit(content); 
-          console.log(content);
+          this.onEditorKeyup.emit(content);
+          //console.log(content);
         });
       },
     });
   }
 
- 
+
 
 }
