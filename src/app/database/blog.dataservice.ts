@@ -17,7 +17,7 @@ export class BlogDataservice {
   }
 
   getAll():Observable<Blog[]>{
-    return Observable.from(this.http.get(this.Url+'all').map((res:Response)=>res.json()))
+    return Observable.from(this.http.get(this.Url+'/all').map((res:Response)=>res.json()))
   }
 
   getBlogById(id: number): Observable<Blog> {
@@ -34,8 +34,6 @@ export class BlogDataservice {
   }
 
   create(blog: Blog) {
-    console.log(JSON.stringify(blog));
-    //alert("Nieuwe blog succesvol toegevoegd!");
     return this.http.post(this.Url, blog);
   }
 
