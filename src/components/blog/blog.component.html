@@ -5,11 +5,14 @@
     Title: <input [(ngModel)]="blog.title" type="text" class="form-field" id="title" style="width:100%" name="title"
                   autocomplete="off" required ngModel>
     <br>
+    Approved by:
+    <br>
+    Create by:
     <br>
     <tiny-editor [elementId]="'my-editor-id'" (onEditorKeyup)="getContent($event)">
     </tiny-editor>
     <br>
     <br>
-    <button>Click me!</button>
+    <button ng-if="errormessage" >Click me!</button>
   </form>
 </div>

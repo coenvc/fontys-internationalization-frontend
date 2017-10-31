@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Blog} from 'models/Blog';
 import {BlogDataservice} from "../../app/database/blog.dataservice";
+import {UserDataservice} from "../../app/database/user.dataservice";
 import {User} from "../../models/User";
 
 @Component({
@@ -11,18 +12,11 @@ import {User} from "../../models/User";
 export class BlogComponent implements OnInit {
 
   public blog: Blog = new Blog();
+  private users: User[];
 
-
-  constructor(private blogData: BlogDataservice) {
-
-
-
-    // Tesje
-    this.blog.approvedBy = new User("Niels", "Werkman", "de", "nielswerkman@gmail.com", "yoksar", true);
-    this.blog.creator = new User("Reinoud", "Zoelen", "van", "reintjezoeloe@gmail.com", "mypass", false);
-
-    this.blog.summary = "Mooie samenvatting yo";
-    //this.blog.summaryImage = new Blob();
+  constructor(private blogData: BlogDataservice,
+              private userData: UserDataservice) {
+    this.userData.getAll().subscribe(result => this.users = result);
   }
 
   ngOnInit() {
