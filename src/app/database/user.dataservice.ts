@@ -1,12 +1,12 @@
-import {Injectable} from "@angular/core";
-import {Response} from "@angular/http";
-import {Observable} from "rxjs/Rx";
-import {User} from "models/User";
+import {Injectable} from '@angular/core';
+import {Response} from '@angular/http';
+import {Observable} from 'rxjs/Rx';
+import {User} from 'models/User';
 // Import RxJs required methods
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/catch";
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 import { host, folder } from 'global'
-import { HttpClientService } from "app/database/HttpClientService";
+import { HttpClientService } from 'app/database/HttpClientService';
 
 @Injectable()
 export class UserDataservice {
@@ -17,18 +17,18 @@ export class UserDataservice {
   }
 
   private extractData(res: Response) {
-    let body = res.json();
+    const body = res.json();
     return body.data || { };
   }
 
-  getAll():Observable<User[]>{
-    return Observable.from(this.http.get(this.Url+'/all').map((res:Response)=>res.json()))
+  getAll(): Observable<User[]> {
+    return Observable.from(this.http.get(this.Url + '/all').map((res: Response) => res.json()))
   }
 
   getUserById(id: number): Observable<User> {
     return this.http
-      .get(this.Url+id)
-      .map(request =>{
+      .get(this.Url + id)
+      .map(request => {
         return request.json()
       });
   }

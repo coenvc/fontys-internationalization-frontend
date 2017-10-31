@@ -8,7 +8,8 @@ export class User {
   public password: String;
   public isModerator: Boolean;
 
-  constructor(id?: number, firstName?: String, lastName?: String, infix?: String, email?: String, password?: String, isModerator?: Boolean) {
+  constructor(id?: number, firstName?: String, lastName?: String, infix?: String, email?: String, password?: String,
+              isModerator?: Boolean) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;

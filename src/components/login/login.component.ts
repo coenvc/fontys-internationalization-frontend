@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginDataservice} from "../../app/database/login.dataservice";
-import {User} from "../../models/User";
+import {LoginDataservice} from '../../app/database/login.dataservice';
+import {User} from '../../models/User';
 import {Router} from '@angular/router';
 
 
@@ -11,11 +11,10 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  private user: User;
 
   constructor(private loginService: LoginDataservice, private router: Router) {
   }
-
-  private user: User;
 
   ngOnInit() {
     localStorage.setItem('currentUser', null);
@@ -33,17 +32,16 @@ export class LoginComponent implements OnInit {
 
     console.log(this.user.email);
 
-    if (this.user.email == null){
+    if (this.user.email == null) {
       alert('Gebruiker niet gevonden.');
       return null;
     } else {
       this.user = res;
       localStorage.setItem('currentUser', JSON.stringify(this.user));
 
-      alert("Succesvol ingelogd");
+      // alert('Succesvol ingelogd');
       console.log('User successfully logged in');
-      //TODO: Add a navigation after successfully loggin in
-      //this.router.navigate(['dashboard']);
+      this.router.navigate(['blog']);
     }
   }
 }

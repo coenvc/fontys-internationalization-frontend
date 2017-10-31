@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, ResponseContentType } from '@angular/http';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Injectable()
 export class HttpClientService {
