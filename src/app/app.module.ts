@@ -10,7 +10,9 @@ import {routing} from 'app/app.routes';
 import { MapComponent } from 'components/map/map.component';
 import { BlogComponent } from 'components/blog/blog.component';
 import { DetailComponent } from 'components/detail-page/detail.component';
-
+import {HttpClientService} from "./database/HttpClientService";
+import {BlogDataservice} from "./database/blog.dataservice";
+import {HttpModule} from "@angular/http";
 
 
 @NgModule({
@@ -26,9 +28,11 @@ import { DetailComponent } from 'components/detail-page/detail.component';
   imports: [
     routing,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [HttpClientService,
+    BlogDataservice],
   bootstrap: [AppComponent]
 })
 
