@@ -14,8 +14,6 @@
 #student-photo {
     height: 160px;
     width: 120px;
-    position: absolute;
-    overflow: hidden;
 }
 
 #location-photo {
@@ -43,9 +41,12 @@
     position: relative;
 }
 
+.detail-content {
+    padding-right: 64px;
+}
+
 .detail-content, .side-detail-content {
     color: #524d43;
-    /* padding-right: 32px; */
 }
 
 .detail-content h1, h2, h3, h4, h5, h6 {
@@ -54,7 +55,6 @@
 
 .side-detail-content {
     border-left: 1px solid #524d43;
-    /* padding: 0 32px 0 32px; */
 }
 
 .upper-side-content {

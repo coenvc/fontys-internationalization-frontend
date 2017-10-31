@@ -1,3 +1,7 @@
+/* * {
+  border: 1px solid black;
+} */
+
 #header {
   width: 100%;
   background-color: #663366;
@@ -29,4 +33,19 @@
 .center {
   display: table;
   margin: auto;
+}
+
+.nav-column {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  padding-right: 16px;
+  color: white;
+}
+
+li {
+  display: inline;
+
 }
