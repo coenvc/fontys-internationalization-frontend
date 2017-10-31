@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'tiny-editor',
   templateUrl: './tiny-editor.component.html',
   styleUrls: ['./tiny-editor.component.css']
