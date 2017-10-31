@@ -17,6 +17,7 @@ import {HeaderComponent} from 'components/header/header.component';
 import {MapComponent} from 'components/map/map.component';
 import {BlogComponent} from 'components/blog/blog.component';
 import {LoginComponent} from "../components/login/login.component";
+import {DetailComponent} from "../components/detail-page/detail.component"
 
 // DataServices
 import {LoginDataservice} from "./database/login.dataservice";
@@ -31,7 +32,8 @@ import {UserDataservice} from "./database/user.dataservice";
     HeaderComponent,
     MapComponent,
     BlogComponent,
-    LoginComponent
+    LoginComponent,
+    DetailComponent
   ],
   imports: [
     routing,
