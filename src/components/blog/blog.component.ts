@@ -30,6 +30,7 @@ export class BlogComponent implements OnInit {
   onSubmit() {
     this.blog.summary = this.blog.content;
     this.blog.content = null;
+    this.blog.creator = JSON.parse(localStorage.getItem('currentUser'));
 
     console.log(JSON.stringify(this.blog));
 

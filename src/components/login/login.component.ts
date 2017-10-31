@@ -5,7 +5,6 @@ import {Router} from '@angular/router';
 
 
 @Component({
-  // tslint:disable-next-line:component-selector
   selector: 'login-form',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
@@ -33,17 +32,16 @@ export class LoginComponent implements OnInit {
 
     console.log(this.user.email);
 
-    if (this.user.email == null){
+    if (this.user.email == null) {
       alert('Gebruiker niet gevonden.');
       return null;
     } else {
       this.user = res;
       localStorage.setItem('currentUser', JSON.stringify(this.user));
 
-      alert('Succesvol ingelogd');
+      // alert('Succesvol ingelogd');
       console.log('User successfully logged in');
-      // TODO: Add a navigation after successfully loggin in
-      // this.router.navigate(['dashboard']);
+      this.router.navigate(['blog']);
     }
   }
 }
