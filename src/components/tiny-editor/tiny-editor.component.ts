@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'tiny-editor',
   templateUrl: './tiny-editor.component.html',
   styleUrls: ['./tiny-editor.component.css']
@@ -27,7 +28,7 @@ export class TinyEditorComponent implements AfterViewInit, OnDestroy {
         editor.on('keyup', () => {
           const content = editor.getContent();
           this.onEditorKeyup.emit(content);
-          //console.log(content);
+          // console.log(content);
         });
       },
     });

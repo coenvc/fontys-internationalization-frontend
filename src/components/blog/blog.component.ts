@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Blog} from 'models/Blog';
-import {BlogDataservice} from "../../app/database/blog.dataservice";
-import {UserDataservice} from "../../app/database/user.dataservice";
-import {User} from "../../models/User";
+import {BlogDataservice} from '../../app/database/blog.dataservice';
+import {UserDataservice} from '../../app/database/user.dataservice';
+import {User} from '../../models/User';
 
 @Component({
   selector: 'app-blog',
@@ -20,7 +20,7 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit() {
-    //this.blogData.getBlogById(0).subscribe(request => this.blog = request);
+    // this.blogData.getBlogById(0).subscribe(request => this.blog = request);
   }
 
   getContent(source: any) {

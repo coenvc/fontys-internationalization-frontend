@@ -1,21 +1,21 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginDataservice} from "../../app/database/login.dataservice";
-import {User} from "../../models/User";
+import {LoginDataservice} from '../../app/database/login.dataservice';
+import {User} from '../../models/User';
 import {Router} from '@angular/router';
 
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'login-form',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
+  private user: User;
 
   constructor(private loginService: LoginDataservice, private router: Router) {
   }
-
-  private user: User;
 
   ngOnInit() {
     localStorage.setItem('currentUser', null);
@@ -40,10 +40,10 @@ export class LoginComponent implements OnInit {
       this.user = res;
       localStorage.setItem('currentUser', JSON.stringify(this.user));
 
-      alert("Succesvol ingelogd");
+      alert('Succesvol ingelogd');
       console.log('User successfully logged in');
-      //TODO: Add a navigation after successfully loggin in
-      //this.router.navigate(['dashboard']);
+      // TODO: Add a navigation after successfully loggin in
+      // this.router.navigate(['dashboard']);
     }
   }
 }
