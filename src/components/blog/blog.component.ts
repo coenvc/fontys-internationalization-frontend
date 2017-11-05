@@ -3,6 +3,7 @@ import {Blog} from 'models/Blog';
 import {BlogDataservice} from '../../app/database/blog.dataservice';
 import {UserDataservice} from '../../app/database/user.dataservice';
 import {User} from '../../models/User';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -14,10 +15,11 @@ export class BlogComponent implements OnInit {
   public blog: Blog = new Blog();
   private users: User[];
 
-  constructor(private blogData: BlogDataservice,
+  constructor(private router: Router,
+              private blogData: BlogDataservice,
               private userData: UserDataservice) {
     this.userData.getAll().subscribe(result => this.users = result);
-  }
+  }n
 
   ngOnInit() {
     // this.blogData.getBlogById(0).subscribe(request => this.blog = request);
@@ -35,5 +37,7 @@ export class BlogComponent implements OnInit {
     console.log(JSON.stringify(this.blog));
 
     this.blogData.create(this.blog).subscribe(result => console.log(result));
+
+    this.router.navigate(['detail-page']);
   }
 }
