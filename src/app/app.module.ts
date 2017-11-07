@@ -12,6 +12,7 @@ import { MapComponent } from 'components/map/map.component';
 import { BlogComponent } from 'components/blog/blog.component';
 import { HomeComponent } from 'components/home/home.component';
 import { AgmCoreModule } from '@agm/core';  
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import {HttpClientService} from './database/HttpClientService';
 
 // Developed components
@@ -47,7 +48,8 @@ import { SchoolService } from 'app/database/school.dataservice';
     }),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AgmSnazzyInfoWindowModule
   ],
   providers: [HttpClientService,
     LoginDataservice,

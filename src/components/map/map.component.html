@@ -1,4 +1,12 @@
 <h1>{{ title }}</h1>
 <agm-map [latitude]="lat" [longitude]="lng">  
-  <agm-marker *ngFor="let school of Schools; let i = index" [latitude]="school.location.latitude" [longitude]="school.location.longitude"></agm-marker> 
+  <agm-marker *ngFor="let school of Schools; let i = index" [latitude]="school.location.latitude" [longitude]="school.location.longitude">
+      <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+          <ng-template>
+            {{school.name}} 
+            <br> 
+            <a href="{{school.url}}">Bezoek de website</a>
+          </ng-template>
+        </agm-snazzy-info-window>  
+  </agm-marker> 
 </agm-map>
