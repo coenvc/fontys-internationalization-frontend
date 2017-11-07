@@ -3,12 +3,16 @@ import {KioskComponent} from 'components/kiosk/kiosk.component';
 import { TinyEditorComponent } from 'components/tiny-editor/tiny-editor.component';
 import { BlogComponent } from 'components/blog/blog.component';
 import { HomeComponent } from 'components/home/home.component';
+import {LoginComponent} from '../components/login/login.component';
+import {DetailComponent} from '../components/detail-page/detail.component';
 
 const APP_ROUTES: Routes = [
-  {path: 'kiosk', component: KioskComponent}, 
+  {path: '', component: LoginComponent},
+  {path: 'kiosk', component: KioskComponent},
   {path: 'tiny-editor', component: TinyEditorComponent},
-  {path: 'blog', component: BlogComponent}, 
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'blog', component: BlogComponent},
+  {path: 'detail-page', component: DetailComponent}
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES, {useHash: true});
