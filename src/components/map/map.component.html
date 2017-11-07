@@ -1,3 +1,4 @@
-<p>
-  map works!
-</p>
+<h1>{{ title }}</h1>
+<agm-map [latitude]="lat" [longitude]="lng">  
+  <agm-marker *ngFor="let school of Schools; let i = index" [latitude]="school.location.latitude" [longitude]="school.location.longitude"></agm-marker> 
+</agm-map>

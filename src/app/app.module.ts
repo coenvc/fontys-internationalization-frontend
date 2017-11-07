@@ -8,9 +8,8 @@ import { HeaderComponent } from 'components/header/header.component';
 import {routing} from 'app/app.routes';
 import { MapComponent } from 'components/map/map.component';
 import { BlogComponent } from 'components/blog/blog.component';
-
-
-
+import { HomeComponent } from 'components/home/home.component';
+import { AgmCoreModule } from '@agm/core';  
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +17,15 @@ import { BlogComponent } from 'components/blog/blog.component';
     KioskComponent,
     HeaderComponent,
     MapComponent,
-    BlogComponent
+    BlogComponent,
+    HomeComponent
   ],
   imports: [
     routing,
-    BrowserModule
+    BrowserModule, 
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCgXuDBIRhbd5dQA7uI2HY1lY2l_UyZqP0'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
