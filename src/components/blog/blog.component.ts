@@ -19,7 +19,7 @@ export class BlogComponent implements OnInit {
               private blogData: BlogDataservice,
               private userData: UserDataservice) {
     this.userData.getAll().subscribe(result => this.users = result);
-  }n
+  }
 
   ngOnInit() {
     // this.blogData.getBlogById(0).subscribe(request => this.blog = request);
