@@ -24,6 +24,9 @@ import {LoginDataservice} from './database/login.dataservice';
 import {BlogDataservice} from './database/blog.dataservice';
 import {UserDataservice} from './database/user.dataservice';
 
+// QR Code
+import { QRCodeModule } from 'angular2-qrcode';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,12 +42,14 @@ import {UserDataservice} from './database/user.dataservice';
     routing,
     BrowserModule,
     FormsModule,
+    QRCodeModule,
     HttpModule
   ],
   providers: [HttpClientService,
     LoginDataservice,
     BlogDataservice,
     UserDataservice],
+
   bootstrap: [AppComponent]
 })
 
