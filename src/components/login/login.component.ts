@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     console.log(this.user.email);
 
     if (this.user.email == null) {
-      alert('Gebruiker niet gevonden.');
+      // alert('Gebruiker niet gevonden.');
       return null;
     } else {
       this.user = res;
