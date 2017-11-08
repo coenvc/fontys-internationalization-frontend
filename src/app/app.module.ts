@@ -11,7 +11,7 @@ import {routing} from 'app/app.routes';
 import { MapComponent } from 'components/map/map.component';
 import { BlogComponent } from 'components/blog/blog.component';
 import { HomeComponent } from 'components/home/home.component';
-import { AgmCoreModule } from '@agm/core';  
+import { AgmCoreModule } from '@agm/core';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import {HttpClientService} from './database/HttpClientService';
 
@@ -28,6 +28,9 @@ import {BlogDataservice} from './database/blog.dataservice';
 import {UserDataservice} from './database/user.dataservice';
 import { SchoolService } from 'app/database/school.dataservice';
 
+// QR Code
+import { QRCodeModule } from 'angular2-qrcode';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,17 +41,18 @@ import { SchoolService } from 'app/database/school.dataservice';
     BlogComponent,
     HomeComponent,
     LoginComponent,
-    DetailComponent,
+    DetailComponent
   ],
   imports: [
     routing,
-    BrowserModule, 
+    BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCgXuDBIRhbd5dQA7uI2HY1lY2l_UyZqP0'
     }),
     BrowserModule,
     FormsModule,
     HttpModule,
+    QRCodeModule,
     AgmSnazzyInfoWindowModule
   ],
   providers: [HttpClientService,
@@ -57,7 +61,6 @@ import { SchoolService } from 'app/database/school.dataservice';
     UserDataservice,
     SchoolService
   ],
-    
   bootstrap: [AppComponent]
 })
 
