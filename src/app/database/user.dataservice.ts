@@ -11,7 +11,7 @@ import { HttpClientService } from 'app/database/HttpClientService';
 @Injectable()
 export class UserDataservice {
 
-  private Url = host + folder + 'user';
+  private Url = host + folder + 'user/';
 
   constructor(private http: HttpClientService) {
   }
@@ -22,7 +22,7 @@ export class UserDataservice {
   }
 
   getAll(): Observable<User[]> {
-    return Observable.from(this.http.get(this.Url + '/all').map((res: Response) => res.json()))
+    return Observable.from(this.http.get(this.Url + 'all').map((res: Response) => res.json()))
   }
 
   getUserById(id: number): Observable<User> {
@@ -37,7 +37,7 @@ export class UserDataservice {
     return this.http.post(this.Url, user);
   }
 
-  update(user: User){
+  update(user: User) {
     return this.http.put(this.Url, user);
   }
 }

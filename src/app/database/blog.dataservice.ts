@@ -11,7 +11,7 @@ import { HttpClientService } from 'app/database/HttpClientService';
 @Injectable()
 export class BlogDataservice {
 
-  private Url = host + folder + 'blog';
+  private Url = host + folder + 'blog/';
 
   constructor(private http: HttpClientService) {
   }
