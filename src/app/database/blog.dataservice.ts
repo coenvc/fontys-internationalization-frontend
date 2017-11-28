@@ -11,18 +11,18 @@ import { HttpClientService } from 'app/database/HttpClientService';
 @Injectable()
 export class BlogDataservice {
 
-  private Url = host + folder + 'blog/';
+  private Url = host + folder + 'blog';
 
   constructor(private http: HttpClientService) {
   }
 
   getAll(): Observable<Blog[]> {
-    return Observable.from(this.http.get(this.Url + 'all').map((res: Response) => res.json()))
+    return Observable.from(this.http.get(this.Url + '/all').map((res: Response) => res.json()))
   }
 
   getBlogById(id: number): Observable<Blog> {
     return this.http
-      .get(this.Url + id)
+      .get(this.Url + '/' + id)
       .map(request => {
         return request.json()
       });
