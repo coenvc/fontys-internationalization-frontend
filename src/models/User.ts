@@ -6,16 +6,21 @@ export class User {
   public infix: String;
   public email: String;
   public password: String;
+  public study: String;
+  public active: boolean;
   public isModerator: Boolean;
 
+
   constructor(id?: number, firstName?: String, lastName?: String, infix?: String, email?: String, password?: String,
-              isModerator?: Boolean) {
+              study?: String, active?: boolean, isModerator?: Boolean) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
     this.infix = infix;
     this.email = email;
     this.password = password;
+    this.study = study;
+    this.active = active;
     this.isModerator = isModerator;
   }
 }
