@@ -4,6 +4,7 @@ import {BlogDataservice} from '../../app/database/blog.dataservice';
 import {UserDataservice} from '../../app/database/user.dataservice';
 import {User} from '../../models/User';
 import {Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router/src/router_state';
 
 @Component({
   selector: 'app-blog',
@@ -19,7 +20,10 @@ export class BlogComponent implements OnInit {
               private blogData: BlogDataservice,
               private userData: UserDataservice) {
     this.userData.getAll().subscribe(result => this.users = result);
+    
   }
+
+  
 
   ngOnInit() {
     // this.blogData.getBlogById(0).subscribe(request => this.blog = request);
@@ -30,8 +34,7 @@ export class BlogComponent implements OnInit {
   }
 
   onSubmit() {
-    this.blog.summary = this.blog.content;
-    this.blog.content = null;
+    this.blog.summary = this.blog.content.slice(0,10);
     this.blog.creator = JSON.parse(localStorage.getItem('currentUser'));
 
     console.log(JSON.stringify(this.blog));
@@ -40,4 +43,6 @@ export class BlogComponent implements OnInit {
 
     this.router.navigate(['detail-page']);
   }
+
+  
 }

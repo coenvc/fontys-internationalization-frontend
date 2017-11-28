@@ -11,14 +11,18 @@ import { Observable } from 'rxjs/Observable';
 })
 export class DetailComponent implements OnInit {
 
-    private blog: Observable<Blog>;
+    private blog:Blog;
 
     constructor(private blogService: BlogDataservice) {
-        this.blog = blogService.getBlogById(1);
-        console.log(this.blog);
+        
     }
 
     ngOnInit() {
-
+        this.blogService.getBlogById(7).subscribe(r =>{ 
+            this.blog = r, 
+            console.log(r)
+        
+        });
+        
     }
 }

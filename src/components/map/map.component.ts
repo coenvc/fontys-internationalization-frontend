@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '../../classes/Location'; 
-import {School} from '../../classes/School'; 
+import {Location} from '../../models/Location'; 
+import {School} from '../../models/School'; 
 import { SchoolService } from 'app/database/school.dataservice';
 
 @Component({
