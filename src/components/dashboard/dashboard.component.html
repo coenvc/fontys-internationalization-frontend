@@ -1,9 +1,6 @@
 <header></header>
 <div class="container">
 
-  <div *ngFor="let blog of blogs">
-    {{blog.id||"First name"}} {{blog.creator.firstName||"First name"}}
-  </div>
 
   <table style="width:100%">
     <tr>
@@ -12,17 +9,14 @@
       <th style="width:20%">Auteur</th>
       <th style="width:20%">Richting</th>
     </tr>
-    <tr>
-      <td>NL</td>
-      <td>Mijn wereldreis door Tilburg en Oostrout</td>
-      <td>Jan de Wolph</td>
-      <td>Software</td>
-    </tr>
-    <tr>
-      <td>TR</td>
-      <td>Blogtitel</td>
-      <td>Patta Christiaan</td>
-      <td>Media</td>
-    </tr>
+
+    <ng-container *ngFor="let blog of blogs">
+      <tr>
+        <td id="table_flag">🇳🇱</td>
+        <td>{{blog?.contentImage}}</td>
+        <td>{{blog?.creator.firstName}} {{blog.creator.lastName}}</td>
+        <td>{{blog.creator.study}}</td>
+      </tr>
+    </ng-container>
   </table>
 </div>
