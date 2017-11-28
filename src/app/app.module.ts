@@ -1,7 +1,6 @@
 // Angular components
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
@@ -21,6 +20,7 @@ import {KioskComponent} from 'components/kiosk/kiosk.component';
 import {HeaderComponent} from 'components/header/header.component';
 import {LoginComponent} from '../components/login/login.component';
 import {DetailComponent} from '../components/detail-page/detail.component'
+import {DashboardComponent} from '../components/dashboard/dashboard.component';
 
 // DataServices
 import {LoginDataservice} from './database/login.dataservice';
@@ -41,7 +41,8 @@ import { QRCodeModule } from 'angular2-qrcode';
     BlogComponent,
     HomeComponent,
     LoginComponent,
-    DetailComponent
+    DetailComponent,
+    DashboardComponent
   ],
   imports: [
     routing,
