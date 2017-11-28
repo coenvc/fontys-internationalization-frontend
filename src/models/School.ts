@@ -1,5 +1,5 @@
-import {Location} from '../classes/Location';
-export class School{ 
+import {Location} from './Location';
+export class School{
     public city: string;
     public country: string;
     public email: string;
