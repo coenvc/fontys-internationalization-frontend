@@ -18,7 +18,7 @@ export class DetailComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.blogService.getBlogById(5).subscribe(r =>{ 
+        this.blogService.getBlogById(6).subscribe(r =>{ 
             this.blog = r, 
             console.log(r)
         
